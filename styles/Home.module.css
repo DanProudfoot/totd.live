@@ -26,11 +26,24 @@
 
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 0;
 
 	background-size: cover;
 
 	filter: blur(6px);
 	opacity: 0.5;
 	transform: scale(1.1);
+}
+
+.footer {
+	position: relative;
+	z-index: 1;
+
+	padding-bottom: 1rem;
+
+	text-align: center;
+}
+
+.footer a {
+	text-decoration: underline;
 }

@@ -7,7 +7,6 @@ import { HomePage } from '../components/HomePage/HomePage';
 import { getTOTDBundle } from '../pages/api/totd.js';
 
 export default function Home({ map, times }) {
-	console.log(map);
 	return (
 		<div className={style.container}>
 			<Head>
@@ -18,6 +17,21 @@ export default function Home({ map, times }) {
 			<main className={style.main}>
 				<HomePage map={map} times={times}></HomePage>
 			</main>
+
+			<footer className={style.footer}>
+				<div>
+					Report any issues{' '}
+					<a href="https://github.com/DanProudfoot/totd.live/issues">
+						on Github
+					</a>
+				</div>
+				<div>
+					Thanks to breeku for{' '}
+					<a href="https://github.com/breeku/trackmania-api-node">
+						trackmania-api-node
+					</a>
+				</div>
+			</footer>
 			<div
 				className={style.background}
 				style={{ backgroundImage: `url(${map.thumbnailUrl})` }}
