@@ -1,12 +1,28 @@
+import { useEffect } from 'react';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import Analytics from 'analytics';
+import googleAnalytics from '@analytics/google-analytics';
 
 import style from '../styles/Home.module.css';
 
 import { HomePage } from '../components/HomePage/HomePage';
 import { getTOTDBundle } from '../pages/api/totd.js';
 
+const analytics = Analytics({
+	app: 'totd-live',
+	plugins: [
+		googleAnalytics({
+			trackingId: process.env.NEXT_PUBLIC_ANALYTICS_ID
+		})
+	]
+});
+
 export default function Home({ map, times }) {
+	useEffect(() => {
+		analytics.page();
+	}, []);
+
 	return (
 		<div className={style.container}>
 			<Head>
