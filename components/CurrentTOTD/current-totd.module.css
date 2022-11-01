@@ -1,0 +1,51 @@
+.layout {
+  max-width: 960px;
+
+  display: grid;
+  gap: 3vw;
+}
+
+.track {
+  font-weight: bold;
+  text-align: center;
+}
+
+.trackName {
+  font-size: min(4rem, 7vw);
+  line-height: 1;
+}
+
+.AT {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.authorMedal {
+  aspect-ratio: 1/1;
+}
+
+.time {
+  font-weight: bold;
+  font-size: min(12rem, 15vw);
+}
+
+.medals {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.medal {
+  display: flex;
+  align-items: center;
+
+  font-size: min(2rem, 3vw);
+}
+
+.medal img {
+  width: min(64px, 10vw);
+  height: auto;
+
+  margin-right: 0.5em;
+}
