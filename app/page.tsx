@@ -1,5 +1,4 @@
 import { CurrentTOTD } from 'components/CurrentTOTD/CurrentTOTD';
-import Head from 'next/head';
 import { getTOTDBundle } from './getTrackmaniaStats';
 
 import styles from './index.module.css';
@@ -9,11 +8,6 @@ export default async function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>AT is: {times?.author}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
         <CurrentTOTD map={map} times={times} />
       </main>

@@ -15,9 +15,9 @@ export interface TrackTimes {
 
 function msToM(millis: number) {
   const minutes = Math.floor(millis / 60000);
-  const seconds = ((millis % 60000) / 1000).toFixed(3);
+  const seconds = ((millis % 60000) / 1000).toFixed(3).padStart(6, '0');
 
-  return `${minutes}:${millis < 10 * 1000 ? '0' : ''}${seconds}`;
+  return `${minutes}:${seconds}`;
 }
 
 const login = async (credentials: string) => {

@@ -9,7 +9,12 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head></head>
+      <head>
+        <head>
+          <link rel="icon" href="/favicon.ico" />
+          <title>TOTD</title>
+        </head>
+      </head>
       <body>{children}</body>
     </html>
   );
